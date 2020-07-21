@@ -45,3 +45,19 @@ When  0≤α≤4 , the map takes an input  0≤x≤1  to give an output in the s
 We will explore this using phase plots.
 
 You can find good detail on Logistic Map at: https://en.wikipedia.org/wiki/Logistic_map
+
+## Coin Toss Random Walks : ## 
+If a coin has a probability of  p  for showing heads and  q=1−p  for showing heads, then the probability of seeing  M  heads when coin is tossed  n>M  times is given by:
+P(M;n)=n!M!(n−M)!pMqn−M
+ 
+If the average the number of heads is denoted  Mn≡M/n , then clearly  0≤Mn≤1  and we expect that  Mn→∞=p . For  Mn  being in the range  (x,y) , we have:
+Prob(x<Mn<y)=∑r∈Z ∧ x<rn<yP(r;n)
+
+Let  c(t)  be the result of coin toss, tossed at time  t . Then Random Walk is given by
+x(t+1)=x(t)+δc(t),H−δc(t),T with  x(0)=0 .
+
+## Integration Without Integration ## 
+Computing integrals (numerically) is an important task in many computational fields. We will explore two schemes:
+
+1. Finite difference schemes / Grid schemes
+2. Monte Carlo scheme : Analogy- To find the area of a circle on a ground, we can do the following. Create a square tangential to the circle and randomly throw a penny inside the square till infinity and keep a count of the number of coins that fell inside the circle. The area of the circle simply is #coins inside the circle/ #total coins thrown * Area of square ( which is easy )
